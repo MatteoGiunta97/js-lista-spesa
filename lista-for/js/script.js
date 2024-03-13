@@ -25,11 +25,16 @@ const list = [
     'Piatti pronti'
 ];
 
+// Seleziono la lista dal DOM
+const groceryList = document.querySelector('#grocery-list');
+
 // Leggo gli elementi della lista
 for (let index = 0; index < list.length; index++) {
 
-    let listItem = list[index];
+    // Inserisco ogni elemento in un list item
+    let listItem = `<li>${list[index]}</li>`;
 
-    
+    // Inserisco il list item all'interno della unordered list del DOM
+    groceryList.innerHTML += listItem;
     
 }
